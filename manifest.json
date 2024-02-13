@@ -1,0 +1,24 @@
+{
+   "manifest_version": 3,
+   "name": "Mi Alma Chrome Extension",
+   "permissions": [ "activeTab", "storage" ],
+   "description": "Mi Alma Products sticker",
+   "version": "1.0",
+   "background": {
+      "service_worker": "./scripts/background.js"
+   },
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "icons": {
+      "16": "assets/mi-alma-2000.png",
+      "48": "assets/mi-alma-2000.png",
+      "128": "assets/mi-alma-2000.png"
+   },
+   "content_scripts": [
+      {
+         "matches": ["https://mialmastore.com/products/*"],
+         "js": ["./scripts/content-scripts.js"]
+      }
+   ]
+}

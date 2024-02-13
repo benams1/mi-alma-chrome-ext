@@ -1,0 +1,19 @@
+body {
+
+    background-color: #607d8b00;
+    padding: 2%;
+}
+#printable-area {
+    width: 402px;
+    height: 214px;
+}
+.title {
+    text-align: center;
+    color: #2196F3;
+}
+@media print {
+
+    #not-printable-area {
+        display: none;
+    }
+}

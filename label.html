@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>label</title>
+    <meta charset="utf-8">
+    <link href="assets/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/jquery-qr-code.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/popup.css">
+</head>
+<body>
+<div class="container text-lg-start">
+    <div id="not-printable-area" class="row pb-5">
+        <div class="col-6">
+            <button id="print" disabled>Print</button>
+        </div>
+    </div>
+    <div id="printable-area" class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+        <div class="col p-3 d-flex flex-column position-static" >
+            <div class="row align-content-center">
+                <div id="qr-code"></div>
+            </div>
+            <div class="row">
+                <h6 class="mb-0">Scan to order more from same model</h6>
+            </div>
+        </div>
+        <div class="col p-4 d-flex flex-column position-static">
+            <div class="row pb-2 align-content-start">
+                <h5 id="model"></h5>
+            </div>
+            <div class="row pb-2 align-content-start">
+                <h5 id="size"></h5>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./assets/bootstrap/bootstrap.min.js"></script>
+<script src="./scripts/label.js"></script>
+</body>
+</html>
