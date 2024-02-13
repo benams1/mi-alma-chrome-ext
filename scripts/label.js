@@ -2,7 +2,6 @@
 const PRINT_ID = 'print';
 
 function setProductInfo(model, size, unit) {
-  console.log('__setInfo', model, size, unit);
   $('#model').text(`Model: ${model}`);
   $('#size').text(`Size: ${size} ${unit}`);
 }
@@ -24,7 +23,8 @@ window.onload = function () {
   const query = new URLSearchParams(window.location.search)
   const {sku, url}  = Object.fromEntries([...query]);
   if (sku && url){
-    const [model, size, unit] = sku.split('_')
+    const delimiter = sku.includes('_') ? '_' : '-';
+    const [model, size, unit] = sku.split(delimiter)
     setProductInfo(model, size, unit)
     addQrCode(url);
     enablePrintButton();
