@@ -12,8 +12,8 @@ function addQrCode(url) {
   const qrElement = $('#qr-code')
   qrElement.empty();
   qrElement.qrcode({
-    width: 145,
-    height: 145,
+    width: 210,
+    height: 210,
     render: 'canvas',
     text: url
   });
@@ -31,11 +31,9 @@ window.onload = function () {
   }else {
     window.alert('missing parameters')
   }
-  $(`#${PRINT_ID}`).on("click", function() {
-    console.log('print')
-    window.document.close();
-    window.focus();
+
+  setTimeout(() => {
     window.print();
     window.close();
-  })
+  }, 50);
 }
